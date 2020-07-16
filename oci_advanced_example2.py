@@ -7,17 +7,17 @@ default_args = {'owner': 'airflow',
                 'start_date': datetime(2020, 5, 26),
                 'email': ['your_email@somecompany.com'],
                 'email_on_failure': False,
-                'email_on_retry': False,
-                'bucket_name': 'acs',
-                'oci_conn_id': 'oci_default',
-                'compartment_ocid': 'ocid1.compartment.oc1..aaaaaaaa64t4n5eposuegupgdtggjah2lyp7zbqmbpssvwf55q6gnnsnwpyq',
-                'object_name': 'oci://bas_test_bucket@osvcstage/bas-sparktest.jar'
+                'email_on_retry': False
                 }
 
 dag = DAG('oci_advanced_example2',
           default_args=default_args,
           schedule_interval='@hourly',
-          catchup=False
+          catchup=False,
+          bucket_name='acs',
+          oci_conn_id='oci_default',
+          compartment_ocid='ocid1.compartment.oc1..aaaaaaaa64t4n5eposuegupgdtggjah2lyp7zbqmbpssvwf55q6gnnsnwpyq',
+          object_name='oci://bas_test_bucket@osvcstage/bas-sparktest.jar'
           )
 
 oci_conn_id = "oci_default"
