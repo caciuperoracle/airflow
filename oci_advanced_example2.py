@@ -38,7 +38,7 @@ with dag:
                                       language="SCALA",
                                       class_name="HelloWorld",
                                       )
-    t2 = OCIDataFlowRun(task_id='Run_Dataflow_Application_{0}'.format(dataflow_appname),
+    t2 = OCIDataFlowRun(task_id='Run_Dataflow_Application_BAS',
                         compartment_ocid="ocid1.compartment.oc1..aaaaaaaa64t4n5eposuegupgdtggjah2lyp7zbqmbpssvwf55q6gnnsnwpyq",
                         display_name="bas_test_app",
                         oci_conn_id="oci_default",
