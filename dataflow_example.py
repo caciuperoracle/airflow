@@ -19,9 +19,9 @@ dag = DAG('dataflow_example',
 oci_conn_id = "oci_default"
 bucketname = "bas-airflow-test2"
 compartment_ocid = "ocid1.compartment.oc1..aaaaaaaa64t4n5eposuegupgdtggjah2lyp7zbqmbpssvwf55q6gnnsnwpyq"
-dataflow_file = "oci://bas_test_bucket@osvcstage/bas-sparktest.jar"
+dataflow_file = "dataflow_example.py"
 dataflow_appname = "bas_test"
-
+file_path = "D:/OracleWorkspace/oci-airflow/scripts/dags/"
 
 with dag:
     t1 = MakeBucket(task_id='Make_Bucket',
