@@ -27,6 +27,8 @@ dataflow_appname = "some_app_name"
 
 with dag:
     t1 = OCIDataFlowCreateApplication(task_id='Create_Dataflow_Application_BAS',
+                                      bucket_name="acs",
+                                      oci_conn_id="oci_default",
                                       compartment_ocid="ocid1.compartment.oc1..aaaaaaaa64t4n5eposuegupgdtggjah2lyp7zbqmbpssvwf55q6gnnsnwpyq",
                                       display_name="Data Flow Test App",
                                       driver_shape="VM.Standard2.1",
