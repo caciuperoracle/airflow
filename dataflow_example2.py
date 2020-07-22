@@ -19,9 +19,8 @@ dag = DAG('dataflow_example2',
 oci_conn_id = "oci_default"
 bucketname = "bas-airflow-test2"
 compartment_ocid = "ocid1.compartment.oc1..aaaaaaaa64t4n5eposuegupgdtggjah2lyp7zbqmbpssvwf55q6gnnsnwpyq"
-dataflow_file = "dataflow_example.py"
+dataflow_file = "some_file.jar"
 dataflow_appname = "bas_test"
-file_path = "D:/OracleWorkspace/oci-airflow/scripts/dags/"
 
 with dag:
     t1 = OCIDataFlowCreateApplication(task_id='Create_Dataflow_Application_{0}'.format(dataflow_appname),
